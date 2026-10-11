@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LMT Jobs | Job Portal & Complete Placement Prep Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <div class="brand">
+        <div class="brand-icon">⚡</div>
+        <div class="brand-title">LMT <span>Jobs</span></div>
+      </div>
+
+      <nav class="nav-links">
+        <button class="nav-btn active" data-tab="home-tab">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Home
+        </button>
+        <button class="nav-btn" data-tab="jobs-tab">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          Job Portal
+        </button>
+        <button class="nav-btn" data-tab="prep-tab">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          Prep Hub
+        </button>
+        <button class="nav-btn" data-tab="companies-tab">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+          Company Process
+        </button>
+        <button class="nav-btn" data-tab="dsa-tab">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          DSA Sheet
+        </button>
+        <button class="nav-btn" data-tab="dashboard-tab">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          My Tracker
+        </button>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Clear Dark/Light Mode Button -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Dark/Light Mode">
+          <span id="themeIcon">🌙</span>
+          <span id="themeLabel">Dark Mode</span>
+        </button>
+
+        <!-- Sign In Access -->
+        <div id="authNavContainer">
+          <button class="signin-btn" id="openSignInModalBtn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+            Sign In
+          </button>
+        </div>
+
+        <button class="post-job-btn" id="openPostJobModalBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Post a Job
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="view-container">
+
+      <!-- ==========================================
+           TAB 0: HOME PAGE
+           ========================================== -->
+      <section id="home-tab" class="tab-pane active">
+        <!-- Home Hero Bar -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2.25rem 1.5rem; text-align: center; margin-bottom: 2.5rem; box-shadow: var(--shadow-sm); position: relative; overflow: hidden;">
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.35rem 0.95rem; border-radius: var(--radius-full); background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.25); color: #60a5fa; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem;">
+            <span>🚀 Complete Tech Placement & Career Platform</span>
+          </div>
+          <h1 style="font-size: 2.25rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.75rem; line-height: 1.25;">
+            Master Skills, Ace Interviews, <br><span class="hero-gradient">Land Your Dream Tech Job</span>
+          </h1>
+          <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 720px; margin: 0 auto 1.5rem; line-height: 1.6;">
+            LMT Jobs connects students & software engineers with top verified opportunities, topic-wise DSA sheets, comprehensive CS & Aptitude cheatsheets, and insider company exam blueprints.
+          </p>
+
+          <div class="home-hero-actions">
+            <button class="home-hero-btn primary" onclick="window.switchTab('jobs-tab')">
+              <span>💼 Explore Jobs</span>
+              <span>→</span>
+            </button>
+            <button class="home-hero-btn outline" onclick="window.switchTab('dsa-tab')">
+              <span>⚡ SDE DSA Sheet</span>
+            </button>
+            <button class="home-hero-btn outline" onclick="window.switchTab('prep-tab')">
+              <span>📚 Placement Prep Hub</span>
+            </button>
+            <button class="home-hero-btn outline" onclick="window.switchTab('companies-tab')">
+              <span>🏢 Company Blueprints</span>
+            </button>
+          </div>
+
+          <div class="stats-grid" style="border-top: 1px solid var(--border-color); padding-top: 1.25rem; margin-top: 1.25rem;">
+            <div class="stat-item">
+              <span class="stat-val" id="statsJobsCount">8+</span>
+              <span class="stat-lbl">Active Tech Jobs</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val" id="statsDSACount">100%</span>
+              <span class="stat-lbl">Curated SDE Sheet</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val" id="statsCompaniesCount">6+</span>
+              <span class="stat-lbl">Top Hiring Blueprints</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val" id="statsPrepCount">4 Pillars</span>
+              <span class="stat-lbl">Aptitude • DSA • CS • HR</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- The 4 Core Pillars of LMT Jobs -->
+        <h3 class="home-section-title"><span>🌟</span> Explore What LMT Jobs Offers</h3>
+        <p class="home-section-subtitle">Everything you need from your first line of code to the final offer letter.</p>
+
+        <div class="home-pillars-grid">
+          <!-- Pillar 1: Job Portal -->
+          <div class="home-pillar-card">
+            <div class="home-pillar-icon" style="background: rgba(59, 130, 246, 0.15); color: #3b82f6;">💼</div>
+            <h4 class="home-pillar-title">Curated Job Portal</h4>
+            <p class="home-pillar-desc">
+              Verified software openings for Freshers (2025/2026 Batch) and experienced engineers from Amazon, Microsoft, TCS, Infosys, and high-growth startups with full CTC transparency.
+            </p>
+            <button class="home-pillar-btn" onclick="window.switchTab('jobs-tab')">
+              <span>Browse Tech Openings</span>
+              <span>→</span>
+            </button>
+          </div>
+
+          <!-- Pillar 2: Prep Hub -->
+          <div class="home-pillar-card">
+            <div class="home-pillar-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">📚</div>
+            <h4 class="home-pillar-title">Placement Prep Hub</h4>
+            <p class="home-pillar-desc">
+              Comprehensive cheatsheets: Quantitative Aptitude speed math, Operating Systems, DBMS & SQL, Computer Networks, and HR behavioral rounds (STAR method) with live MCQs.
+            </p>
+            <button class="home-pillar-btn" style="color: var(--accent-emerald);" onclick="window.switchTab('prep-tab')">
+              <span>Read Notes & Formulas</span>
+              <span>→</span>
+            </button>
+          </div>
+
+          <!-- Pillar 3: Company Blueprints -->
+          <div class="home-pillar-card">
+            <div class="home-pillar-icon" style="background: rgba(139, 92, 246, 0.15); color: #8b5cf6;">🏢</div>
+            <h4 class="home-pillar-title">Company Hiring Processes</h4>
+            <p class="home-pillar-desc">
+              Deep-dive breakdowns for Google, Microsoft, Amazon, TCS (Ninja/Digital/Prime), Infosys, and Accenture. Exam patterns, sectional timing, syllabus weights, and cutoffs.
+            </p>
+            <button class="home-pillar-btn" style="color: var(--accent-purple);" onclick="window.switchTab('companies-tab')">
+              <span>View Exam Patterns</span>
+              <span>→</span>
+            </button>
+          </div>
+
+          <!-- Pillar 4: Dedicated DSA Sheet -->
+          <div class="home-pillar-card">
+            <div class="home-pillar-icon" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b;">⚡</div>
+            <h4 class="home-pillar-title">Topic-Wise DSA Sheet</h4>
+            <p class="home-pillar-desc">
+              Curated SDE problem sheet organized by topic (Arrays, Strings, Linked Lists, Trees, Graphs, DP). Interactive tracking checkboxes, code solutions, and LeetCode links.
+            </p>
+            <button class="home-pillar-btn" style="color: var(--accent-amber);" onclick="window.switchTab('dsa-tab')">
+              <span>Practice DSA Problems</span>
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Featured Job Openings Highlight -->
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.5rem;">
+          <div>
+            <h3 class="home-section-title"><span>🔥</span> Featured Tech Openings</h3>
+            <p class="home-section-subtitle" style="margin-bottom: 0.75rem;">Recently posted high-package roles accepting applications.</p>
+          </div>
+          <button class="btn-secondary" style="font-size: 0.8rem; margin-bottom: 0.75rem;" onclick="window.switchTab('jobs-tab')">View All Jobs →</button>
+        </div>
+        <div id="homeFeaturedJobsGrid" class="jobs-grid" style="margin-bottom: 2.5rem;">
+          <!-- Dynamically populated by JS -->
+        </div>
+
+        <!-- Company Hiring Spotlight -->
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.5rem;">
+          <div>
+            <h3 class="home-section-title"><span>🏢</span> Top Companies Hiring This Season</h3>
+            <p class="home-section-subtitle" style="margin-bottom: 0.75rem;">Review selection rounds and test formats before appearing.</p>
+          </div>
+          <button class="btn-secondary" style="font-size: 0.8rem; margin-bottom: 0.75rem;" onclick="window.switchTab('companies-tab')">All 6+ Blueprints →</button>
+        </div>
+        <div id="homeFeaturedCompaniesGrid" class="companies-grid" style="margin-bottom: 2.5rem;">
+          <!-- Dynamically populated by JS -->
+        </div>
+
+        <!-- 5-Step Placement Roadmap -->
+        <h3 class="home-section-title"><span>🗺️</span> 5-Step Proven Placement Roadmap</h3>
+        <p class="home-section-subtitle">How successful candidates navigate preparation with LMT Jobs.</p>
+
+        <div class="home-roadmap-grid">
+          <div class="roadmap-step-card">
+            <div class="roadmap-step-num">Step 01</div>
+            <h4 class="roadmap-step-title">Aptitude & Speed Math</h4>
+            <p class="roadmap-step-desc">Master percentage conversions, time & work formulas, and deductive syllogisms to clear OA screening rounds.</p>
+          </div>
+          <div class="roadmap-step-card">
+            <div class="roadmap-step-num">Step 02</div>
+            <h4 class="roadmap-step-title">Core CS Fundamentals</h4>
+            <p class="roadmap-step-desc">Revise Operating Systems (Deadlocks, Paging), DBMS (ACID, Normalization, SQL), and Computer Networks (TCP/IP).</p>
+          </div>
+          <div class="roadmap-step-card">
+            <div class="roadmap-step-num">Step 03</div>
+            <h4 class="roadmap-step-title">Topic-Wise DSA Sheet</h4>
+            <p class="roadmap-step-desc">Solve curated problem sets from Arrays to Dynamic Programming and track your Easy, Medium, Hard progress.</p>
+          </div>
+          <div class="roadmap-step-card">
+            <div class="roadmap-step-num">Step 04</div>
+            <h4 class="roadmap-step-title">Company Blueprints & HR</h4>
+            <p class="roadmap-step-desc">Inspect exact round breakdowns, syllabus weights, and prepare winning STAR behavioral stories.</p>
+          </div>
+          <div class="roadmap-step-card">
+            <div class="roadmap-step-num">Step 05</div>
+            <h4 class="roadmap-step-title">Quick Apply & Track</h4>
+            <p class="roadmap-step-desc">Apply directly with your portfolio/resume in 1 click and monitor application statuses in your Tracker.</p>
+          </div>
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="home-cta-box">
+          <h3 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.5rem;">Ready to Crack Your Next Tech Interview?</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 540px; margin: 0 auto 1.5rem;">
+            Join thousands of engineering students preparing smarter with LMT Jobs. Zero cost, complete placement resources.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
+            <button class="btn-primary" style="padding: 0.65rem 1.5rem; font-size: 0.9rem;" onclick="window.switchTab('jobs-tab')">Browse All Jobs</button>
+            <button class="btn-secondary" style="padding: 0.65rem 1.5rem; font-size: 0.9rem;" onclick="window.switchTab('dsa-tab')">Open SDE Sheet</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           TAB 1: JOB PORTAL
+           ========================================== -->
+      <section id="jobs-tab" class="tab-pane">
+        <!-- Search & Filter Bar -->
+        <div class="filter-bar">
+          <div class="search-input-wrap">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" id="jobSearchInput" class="search-input" placeholder="Search by role, company, or skills (e.g. Python, Amazon, React)...">
+          </div>
+          <select id="jobTypeFilter" class="select-filter">
+            <option value="">All Job Types</option>
+            <option value="Full-time">Full-time</option>
+            <option value="Internship">Internship</option>
+            <option value="Remote">Remote</option>
+          </select>
+          <select id="jobExpFilter" class="select-filter">
+            <option value="">All Experience</option>
+            <option value="Fresher">Freshers / 0 Years</option>
+            <option value="1 - 3">1 - 3 Years</option>
+            <option value="0 - 2">0 - 2 Years</option>
+          </select>
+          <button id="showBookmarksOnlyBtn" class="btn-secondary" style="display:flex; align-items:center; gap:0.4rem;">
+            <span>⭐ Bookmarked</span>
+          </button>
+        </div>
+
+        <!-- Jobs Grid Container -->
+        <div id="jobsGrid" class="jobs-grid">
+          <!-- Rendered via JavaScript -->
+        </div>
+      </section>
+
+      <!-- ==========================================
+           TAB 2: PREPARATION HUB
+           ========================================== -->
+      <section id="prep-tab" class="tab-pane">
+        <div class="prep-category-nav">
+          <button class="prep-tab-btn active" data-category="aptitude">
+            <span>🔢 Quantitative & Logical Aptitude</span>
+          </button>
+          <button class="prep-tab-btn" data-category="technical">
+            <span>💻 CS Core (OS, DBMS, Networks, OOP)</span>
+          </button>
+          <button class="prep-tab-btn" data-category="hr">
+            <span>🤝 HR & Behavioral (STAR Method)</span>
+          </button>
+        </div>
+
+        <div class="prep-grid">
+          <!-- Left: Study Material & Cheatsheets -->
+          <div id="prepNotesContainer" class="notes-container">
+            <!-- Rendered via JS -->
+          </div>
+
+          <!-- Right: Interactive Practice Quiz Widget -->
+          <div class="quiz-sidebar">
+            <div class="sidebar-title">
+              <span>🎯 Instant MCQ Practice</span>
+            </div>
+            <p class="sidebar-subtitle">Test yourself with real placement questions</p>
+            <div id="quizContainer">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           TAB 3: COMPANIES HIRING PROCESS
+           ========================================== -->
+      <section id="companies-tab" class="tab-pane">
+        <div class="filter-bar" style="margin-bottom: 1.5rem;">
+          <div class="search-input-wrap">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" id="companySearchInput" class="search-input" placeholder="Search company (Google, Microsoft, TCS, Infosys, Accenture)...">
+          </div>
+          <select id="companyTierFilter" class="select-filter">
+            <option value="">All Tiers</option>
+            <option value="Tier 1">Tier 1 (Product / Big Tech)</option>
+            <option value="Mass">IT Services / Mass Recruiter</option>
+          </select>
+        </div>
+
+        <div id="companiesGrid" class="companies-grid">
+          <!-- Rendered via JS -->
+        </div>
+      </section>
+
+      <!-- ==========================================
+           TAB 4: DEDICATED DSA SHEET
+           ========================================== -->
+      <section id="dsa-tab" class="tab-pane">
+        <!-- Progress Header -->
+        <div class="dsa-header-panel">
+          <div class="dsa-progress-block">
+            <div class="dsa-progress-text">
+              <span>SDE Sheet Progress</span>
+              <span id="dsaProgressPercentage">0% Completed (0/13 Solved)</span>
+            </div>
+            <div class="progress-bar-track">
+              <div id="dsaProgressBarFill" class="progress-bar-fill" style="width: 0%;"></div>
+            </div>
+          </div>
+          <div style="display:flex; gap:0.6rem; align-items:center;">
+            <span class="diff-badge diff-easy" id="easyCountBadge">Easy: 0 Solved</span>
+            <span class="diff-badge diff-medium" id="medCountBadge">Medium: 0 Solved</span>
+            <span class="diff-badge diff-hard" id="hardCountBadge">Hard: 0 Solved</span>
+          </div>
+        </div>
+
+        <!-- Topic Chips -->
+        <div id="dsaTopicChips" class="dsa-topic-chips">
+          <button class="topic-chip active" data-topic-id="all">All Topics</button>
+          <!-- Dynamic Topics inserted by JS -->
+        </div>
+
+        <!-- Search & Difficulty Filter -->
+        <div class="filter-bar" style="margin-bottom: 1.25rem;">
+          <div class="search-input-wrap">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" id="dsaSearchInput" class="search-input" placeholder="Search problem title or company tag (e.g. Kadane, Two Sum, Google)...">
+          </div>
+          <select id="dsaDiffFilter" class="select-filter">
+            <option value="">All Difficulties</option>
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+          </select>
+          <select id="dsaStatusFilter" class="select-filter">
+            <option value="">All Statuses</option>
+            <option value="solved">Solved Only</option>
+            <option value="unsolved">Unsolved Only</option>
+            <option value="starred">Starred Only</option>
+          </select>
+        </div>
+
+        <!-- DSA Table -->
+        <div class="dsa-table-wrap">
+          <table class="dsa-table">
+            <thead>
+              <tr>
+                <th style="width: 44px; text-align: center;">Done</th>
+                <th style="width: 36px; text-align: center;">⭐</th>
+                <th>Problem Title</th>
+                <th>Topic</th>
+                <th>Difficulty</th>
+                <th>Company Tags</th>
+                <th style="text-align: right;">Solution & Practice</th>
+              </tr>
+            </thead>
+            <tbody id="dsaProblemsTbody">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           TAB 5: MY TRACKER / DASHBOARD
+           ========================================== -->
+      <section id="dashboard-tab" class="tab-pane">
+        <h2 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem;">My Placement Dashboard</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+          <!-- Submitted Applications -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem;">
+            <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; display:flex; align-items:center; justify-content:space-between;">
+              <span>Submitted Applications</span>
+              <span id="appliedCountPill" class="job-eligibility-badge">0 Applied</span>
+            </h3>
+            <div id="applicationsList" style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <p style="color: var(--text-dim); font-size: 0.85rem;">No applications submitted yet. Browse jobs in the Job Portal tab and click "Quick Apply"!</p>
+            </div>
+          </div>
+
+          <!-- Bookmarked Jobs -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem;">
+            <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; display:flex; align-items:center; justify-content:space-between;">
+              <span>Saved / Bookmarked Jobs</span>
+              <span id="savedCountPill" class="job-eligibility-badge">0 Saved</span>
+            </h3>
+            <div id="savedJobsList" style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <p style="color: var(--text-dim); font-size: 0.85rem;">No saved jobs. Click the star icon on any job card to save it for later.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>LMT Jobs © 2026. Built for ambitious software engineers and campus graduates.</p>
+      <p style="margin-top: 0.35rem; color: var(--text-dim);">Job Portal • Placement Prep • Companies Hiring Process • Topic-Wise DSA Sheets</p>
+    </footer>
+  </div>
+
+  <!-- ==========================================
+       MODALS
+       ========================================== -->
+
+  <!-- 1. Quick Apply Modal -->
+  <div id="applyModal" class="modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeModal('applyModal')">&times;</button>
+      <h2 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.25rem;" id="applyModalJobTitle">Apply for Job</h2>
+      <p style="color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1.25rem;" id="applyModalCompany">Company Name</p>
+
+      <form id="applyJobForm">
+        <input type="hidden" id="applyJobId">
+        <div class="form-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" id="applicantName" class="form-control" placeholder="e.g. Swadeshna Ray" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" id="applicantEmail" class="form-control" placeholder="e.g. applicant@college.edu" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone Number *</label>
+          <input type="tel" id="applicantPhone" class="form-control" placeholder="e.g. +91 9876543210" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Resume Link (Google Drive / GitHub / PDF URL) *</label>
+          <input type="url" id="applicantResume" class="form-control" placeholder="https://drive.google.com/your-resume" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Graduation Batch & Experience</label>
+          <select id="applicantExp" class="form-control">
+            <option value="Fresher 2026">Fresher (2026 Batch)</option>
+            <option value="Fresher 2025">Fresher (2025 Batch)</option>
+            <option value="1-2 Years Experience">1 - 2 Years Experience</option>
+            <option value="3+ Years Experience">3+ Years Experience</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Cover Note / Key Strengths</label>
+          <textarea id="applicantCover" class="form-control" rows="3" placeholder="Briefly state your relevant skills and projects..."></textarea>
+        </div>
+        <div style="display:flex; justify-content:flex-end; gap:0.75rem; margin-top: 1.5rem;">
+          <button type="button" class="btn-secondary" onclick="closeModal('applyModal')">Cancel</button>
+          <button type="submit" class="btn-primary">Submit Application</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Job Detail Modal -->
+  <div id="jobDetailModal" class="modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeModal('jobDetailModal')">&times;</button>
+      <div id="jobDetailContent">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Company Detail Modal -->
+  <div id="companyDetailModal" class="modal-overlay">
+    <div class="modal-box" style="max-width: 760px;">
+      <button class="modal-close-btn" onclick="closeModal('companyDetailModal')">&times;</button>
+      <div id="companyDetailContent">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. DSA Solution & Notes Drawer Modal -->
+  <div id="dsaProblemModal" class="modal-overlay">
+    <div class="modal-box" style="max-width: 780px;">
+      <button class="modal-close-btn" onclick="closeModal('dsaProblemModal')">&times;</button>
+      <div id="dsaProblemDetailContent">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Post Job Modal (Recruiter) -->
+  <div id="postJobModal" class="modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeModal('postJobModal')">&times;</button>
+      <h2 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.25rem;">Post a New Opportunity</h2>
+      <p style="color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1.25rem;">Recruiter opening / campus placement alert</p>
+
+      <form id="postJobForm">
+        <div class="form-group">
+          <label class="form-label">Job Title *</label>
+          <input type="text" id="newJobTitle" class="form-control" placeholder="e.g. Software Engineer I" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Company Name *</label>
+          <input type="text" id="newJobCompany" class="form-control" placeholder="e.g. Stripe / Atlassian" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Location *</label>
+          <input type="text" id="newJobLocation" class="form-control" placeholder="e.g. Bangalore / Remote" required>
+        </div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.75rem;">
+          <div class="form-group">
+            <label class="form-label">Job Type</label>
+            <select id="newJobType" class="form-control">
+              <option value="Full-time">Full-time</option>
+              <option value="Internship">Internship</option>
+              <option value="Remote">Remote</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Experience</label>
+            <input type="text" id="newJobExp" class="form-control" placeholder="e.g. Fresher / 0-2 Years">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Salary / Compensation *</label>
+          <input type="text" id="newJobSalary" class="form-control" placeholder="e.g. ₹20 - 30 LPA" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Required Skills (Comma separated) *</label>
+          <input type="text" id="newJobSkills" class="form-control" placeholder="Python, React, SQL, Cloud" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Eligibility Criteria</label>
+          <input type="text" id="newJobEligibility" class="form-control" placeholder="Min 65% or 7.0 CGPA, 2025/2026 Batch">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Job Description</label>
+          <textarea id="newJobDesc" class="form-control" rows="3" placeholder="Overview of responsibilities and day-to-day work..."></textarea>
+        </div>
+        <div style="display:flex; justify-content:flex-end; gap:0.75rem; margin-top: 1.5rem;">
+          <button type="button" class="btn-secondary" onclick="closeModal('postJobModal')">Cancel</button>
+          <button type="submit" class="btn-primary">Publish Job Opening</button>
+        </div>
+      </form>
+    </div>
+  <!-- 6. Sign In Modal -->
+  <div id="signInModal" class="modal-overlay">
+    <div class="modal-box" style="max-width: 440px;">
+      <button class="modal-close-btn" onclick="closeModal('signInModal')">&times;</button>
+      <div style="text-align: center; margin-bottom: 1.25rem;">
+        <div class="brand-icon" style="margin: 0 auto 0.5rem; width: 40px; height: 40px; font-size: 1.2rem;">⚡</div>
+        <h2 style="font-size: 1.35rem; font-weight: 700;">Welcome to LMT Jobs</h2>
+        <p style="color: var(--text-muted); font-size: 0.85rem;">Sign in to access personalized applications & bookmarks</p>
+      </div>
+
+      <!-- Quick 1-Click Demo Logins -->
+      <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 0.85rem; margin-bottom: 1.25rem;">
+        <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent-primary); text-transform: uppercase; margin-bottom: 0.5rem;">⚡ Quick 1-Click Access</div>
+        <div style="display: flex; gap: 0.5rem;">
+          <button type="button" class="btn-primary" style="flex: 1; font-size: 0.78rem; padding: 0.45rem;" onclick="window.demoSignIn('candidate')">
+            Candidate Login
+          </button>
+          <button type="button" class="btn-secondary" style="flex: 1; font-size: 0.78rem; padding: 0.45rem;" onclick="window.demoSignIn('recruiter')">
+            Recruiter Login
+          </button>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; color: var(--text-dim); font-size: 0.75rem;">
+        <hr style="flex: 1; border: none; border-top: 1px solid var(--border-color);">
+        <span>or sign in with credentials</span>
+        <hr style="flex: 1; border: none; border-top: 1px solid var(--border-color);">
+      </div>
+
+      <form id="signInForm">
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input type="text" id="authName" class="form-control" placeholder="e.g. Swadeshna Ray" value="Swadeshna Ray" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" id="authEmail" class="form-control" placeholder="swadeshna@lmtjobs.com" value="swadeshna@lmtjobs.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Role</label>
+          <select id="authRole" class="form-control">
+            <option value="Candidate">Candidate (Job Seeker / Student)</option>
+            <option value="Recruiter">Recruiter (Hiring Manager)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary" style="width: 100%; padding: 0.65rem; font-size: 0.9rem; margin-top: 0.5rem;">
+          Sign In to LMT Jobs
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
